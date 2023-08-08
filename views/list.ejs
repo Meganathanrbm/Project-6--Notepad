@@ -1,0 +1,38 @@
+<%- include("header") -%>
+    <div class="box" id="heading">
+      <h1><%=LISTTITLE%></h1>
+    </div>
+   
+    <div class="box">
+      <% for(var i = 0 ; i < ITEMS.length ; i++){ %>
+        <div class="item">
+          <form action="/delete" method="post" class="check-form">
+            <input type="checkbox" name="checkbox" value=<%=ITEMS[i]._id%> onchange="this.form.submit()">
+          </form>
+          <p><%= ITEMS[i].name %></p>
+          <form  class="delete-form" action="/delete" method="post">
+            <button class="delete-button" name="delete" value=<%=ITEMS[i]._id%> ><i class="fa-solid fa-trash"></i></button>
+          </form>
+        </div>
+      <% } %>
+      <form class="addItem-form" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button name="list" class="add-button" value="newListItem" type="submit">+</button>
+    </form>
+    </div>
+    <form action="/color" method="post" class="color-box">
+      <button class="color-button red " value="red" type="submit" name="color"></button>
+      <button class="color-button green" value="green"  type="submit" name="color"></button>
+      <button class="color-button yellow" value="yellow"  type="submit" name="color"></button>
+      <button class="color-button blue" value="blue"  type="submit" name="color"></button>
+      <p class="none"><%=PRIMARYCOLOR%></p>
+    </form>
+
+
+    <script>
+      const root = document.querySelector(':root');
+      let primaryColor = document.querySelector('.none').textContent;
+      root.style.setProperty('--primary-color', primaryColor );
+    </script>
+    <%- include("footer") -%>
+    

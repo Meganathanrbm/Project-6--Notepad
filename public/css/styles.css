@@ -1,0 +1,152 @@
+:root{
+    /* --primary-color: #ab83e3 ; */
+    --secondary-color:#fff;
+}
+html{
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, var(--primary-color) 50% , #e4e9fd 50%);
+    min-height: 1000px;
+}
+
+h1{
+    color: #fff;
+    padding: 10px;
+}
+
+input[type="checkbox"]{
+    margin:20px;
+    cursor: pointer;
+}
+input[type="text"]{
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+}
+input[type="text"]:focus{
+    outline:none;
+    box-shadow: inset 0 -3px 0 0 var(--primary-color);
+}
+input:checked+p{
+    text-decoration: line-through;
+    text-decoration-color: var(--primary-color);
+    color: gray;
+}
+
+p{
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #00204a;
+}
+.addItem-form{
+    text-align: center;
+    margin-left: 20px;
+    display:flex;
+    flex-direction: row;
+}
+button{
+    cursor: pointer;
+    border-width: 0;
+    border-radius: 50%;
+    border-color: transparent;
+    min-height: 50px;
+    width: 50px;
+}
+.add-button{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 30px;
+    text-justify: auto;
+    margin: 8px;
+    
+}
+.delete-button{
+    background-color: transparent;
+    font-size: 20px;
+    color: gray;
+    
+}
+.delete-button:hover{
+    color: red;
+    font-size: 22px;
+}
+.delete-form{
+    margin-left: auto;
+}
+.box{
+    max-width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+#heading{
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.item{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+/* .item:last-child{
+    border-bottom: 0;
+} */
+
+.color-box{
+    position:absolute;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    top: 15px;
+    right: 3%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+
+}
+.color-button{
+    width: 50px;
+    height:50px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: red;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color:blue;
+}
+
+.none{
+    display: none;
+    opacity: 0;
+}
+
+::placeholder{
+    color: grey;
+    opacity: 1;
+}
+
+footer{
+    color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
